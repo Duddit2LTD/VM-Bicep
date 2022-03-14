@@ -1,0 +1,182 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "CurrentSubscription": {
+            "value": "a4f975f0-a8f5-4c90-bbe8-fc30e2e8d0b1"
+        },
+        "AzureSub": {
+            "value": "c5db4937-6b5e-43af-ad53-83ea7ab4f689"
+        },
+        "RGPrefix":{
+            "value": "DEV"
+        },
+        "DefaultAdminUsername":{
+            "value": "EviidAdminUser"
+        },
+
+        
+        "InfrastructureRG":{
+            "value": "INFRASTRUCTURE-RG"
+        },
+        "RecoveryRG":{
+            "value": "RECOVERY-RG"
+        },
+        "DATARG":{
+            "value": "DATA-RG"
+        },
+        "VMRG:":{
+            "value": "VM-RG"
+        },
+
+        "DefaultAdminPassword":{
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                },
+                "secretName": "AdminPassword"
+            }
+        },
+
+        "EviidcomCert":{
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                },
+                "secretName": "eviid-com"
+                
+            }
+        },
+        "eviidCertPassWord":{
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                },
+                "secretName": "eviid-com-cert-password"
+            }
+        },
+        "EviidnetCert":{
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                },
+                "secretName": "eviid-net"
+                   
+            }
+        },
+        "EviidUKSouthKeyVault":{
+            "value": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+        },
+
+        "domainjoinusername":{
+            "value": "domainjoin@eviid.net"
+        },
+
+        "domainjoinpassword":{
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                },
+                "secretName": "domainjoinpassword"
+            }
+        },
+
+        "VMAutomationURL":{
+            "value": "https://8d5eac44-5d14-4ffb-b3bd-2389c1b9d50d.agentsvc.uks.azure-automation.net/accounts/8d5eac44-5d14-4ffb-b3bd-2389c1b9d50d"
+        },
+        "VMAutomationKEY":{
+            "value": "i97ZnO8HRSWGBXoNs5WNBFfikYzSUGSq+nEGgCydJFhxrZC8V9eueoaQUr3mUC0YRVytYB5hk3BO2bL1AocQsw=="
+        },
+
+        "AppGatewayPrefix":{
+            "value": "Dev-AppGW"
+        },
+        "StorageAccPRefix":{
+            "value": "devstor"
+        },
+        "RecoveryVaultPRefix":{
+            "value": "DEV-RV_"
+        },
+        "BackupPolicyPrefix":{
+            "value": "Dev-BP_"
+        },
+
+
+        
+        "VNETPrefix": {
+            "metadata": {
+                "description": "The prefix for all VNets in this subscription"
+            },
+            "value": "Dev-VNET_"
+        },
+
+        "Slash16AddressSuffix":{
+            "metadata": {
+                "description": "This gets added on to all the Address spaces below forming a complete IP range"
+            },
+            "value": ".0.0/16"
+        },
+
+        "VNETUKSouth":{
+            "metadata": {
+                "description": "The IP Prefic for this VNEt - Will combine with the above Slash16AddressSuffix "
+            },
+            "value": "172.16"
+        },
+
+        "VNETUKWest":{
+            "metadata": {
+                "description": "The IP Prefic for this VNEt - Will combine with the above Slash16AddressSuffix "
+            },
+            "value": "172.17"
+        },
+
+        "VNETFRANCECENTRAL":{
+            "metadata": {
+                "description": "The IP Prefic for this VNEt - Will combine with the above Slash16AddressSuffix "
+            },
+            "value": "172.18"
+        },
+
+        "VNETEASTUS":{
+            "metadata": {
+                "description": "The IP Prefic for this VNEt - Will combine with the above Slash16AddressSuffix "
+            },
+            "value": "172.19"
+        },
+
+        "VNETSEAsia":{
+            "metadata": {
+                "description": "The IP Prefic for this VNEt - Will combine with the above Slash16AddressSuffix "
+            },
+            "value": "172.20"
+        },
+        
+
+        "WV_Daily_Backups":{
+            "value": 1
+        },
+        "WV_Weekly_Backups":{
+            "value": 1
+        },
+        "WV_Monthly_Backups":{
+            "value": 1
+        },
+        "WV_Yearly_Backups":{
+            "value": 1
+        },
+
+
+
+
+
+
+
+
+        "tags":{
+            "value": "'Environment: Dev'"
+        }
+
+
+    }
+}
