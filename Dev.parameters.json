@@ -2,17 +2,15 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "CurrentSubscription": {
-            "value": "a4f975f0-a8f5-4c90-bbe8-fc30e2e8d0b1"
-        },
+        
         "AzureSub": {
-            "value": "c5db4937-6b5e-43af-ad53-83ea7ab4f689"
+            "value": "xxxxxxxxxxxxxxx"
         },
         "RGPrefix":{
             "value": "DEV"
         },
         "DefaultAdminUsername":{
-            "value": "EviidAdminUser"
+            "value": "xxxxxxxxxxxxx"
         },
 
         
@@ -32,60 +30,60 @@
         "DefaultAdminPassword":{
             "reference": {
                 "keyVault": {
-                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                    "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                 },
-                "secretName": "AdminPassword"
+                "secretName": "xxxxxxxxxxxxxxx"
             }
         },
 
-        "EviidcomCert":{
+        "ComCert":{
             "reference": {
                 "keyVault": {
-                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                    "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                 },
-                "secretName": "eviid-com"
+                "secretName": "xxxxxxxxxxxxxxxxxxx"
                 
             }
         },
-        "eviidCertPassWord":{
+        "CertPassWord":{
             "reference": {
                 "keyVault": {
-                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                    "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                 },
-                "secretName": "eviid-com-cert-password"
+                "secretName": "xxxxxxxxxxxxxxxxxx"
             }
         },
-        "EviidnetCert":{
+        "NetCert":{
             "reference": {
                 "keyVault": {
-                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                    "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                 },
-                "secretName": "eviid-net"
+                "secretName": "xxxxxxxxxxxxxxxxxxxxxxxxx"
                    
             }
         },
         "EviidUKSouthKeyVault":{
-            "value": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+            "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         },
 
         "domainjoinusername":{
-            "value": "domainjoin@eviid.net"
+            "value": "xxxxxxxxxxxxxxxxxxxxxxx"
         },
 
         "domainjoinpassword":{
             "reference": {
                 "keyVault": {
-                    "id": "/subscriptions/c5db4937-6b5e-43af-ad53-83ea7ab4f689/resourceGroups/Eviid/providers/Microsoft.KeyVault/vaults/EviidKeyVaultUKSouth"
+                    "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                 },
-                "secretName": "domainjoinpassword"
+                "secretName": "xxxxxxxxxxxxxxxxxxxx"
             }
         },
 
         "VMAutomationURL":{
-            "value": "https://8d5eac44-5d14-4ffb-b3bd-2389c1b9d50d.agentsvc.uks.azure-automation.net/accounts/8d5eac44-5d14-4ffb-b3bd-2389c1b9d50d"
+            "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         },
         "VMAutomationKEY":{
-            "value": "i97ZnO8HRSWGBXoNs5WNBFfikYzSUGSq+nEGgCydJFhxrZC8V9eueoaQUr3mUC0YRVytYB5hk3BO2bL1AocQsw=="
+            "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         },
 
         "AppGatewayPrefix":{
